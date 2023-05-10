@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #404040;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .jardim {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  .toupeira {
+    background-image: url(assets/toupeira6.svg);
+    width: 223px;
+    height: 169px;
+
+  }
+
+
+  .toupeiras {
+    display: grid;
+    position: absolute;
+    grid-template-areas:
+    "A B C D"
+    "E F G H"
+    "I J K L";
+    gap: 64px;
+}
+
+.toupeiras div:nth-child(1){
+    grid-area: A;
+}
+.toupeiras div:nth-child(2){
+    grid-area: B;
+}
+.toupeiras img:nth-child(3){
+    grid-area: C;
+}
+.toupeiras div:nth-child(4){
+    grid-area: D;
+    animation: toupeirAnimation 1s ease 1s forwards infinite;
+}
+.toupeiras div:nth-child(5){
+    grid-area: E;
+}
+.toupeiras div:nth-child(6){
+    grid-area: F;
+    animation: toupeirAnimation 1s ease 3s forwards infinite;
+}
+.toupeiras div:nth-child(7){
+  grid-area: G;
+}
+.toupeiras div:nth-child(8){
+  grid-area: H;
+}
+.toupeiras div:nth-child(9){
+  grid-area: I;
+}
+.toupeiras div:nth-child(10){
+  grid-area: J;
+}
+.toupeiras div:nth-child(11){
+  grid-area: K;
+}
+.toupeiras div:nth-child(12){
+  grid-area: L;
+  animation: toupeirAnimation 1s ease 5s forwards infinite;
+}
+
+.toupeira:nth-child(12) {
+    animation: toupeirAnimation 1s ease 2s;
+}
+
+.toupeira {
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.toupeira:hover {
+    animation: toupeirAnimation 1s ease infinite;
+}
+
+
+@keyframes toupeirAnimation {
+    0% {
+        background-image: url(/assets/toupeira1.svg);
+        transform: translateY(0);
+    }
+
+    20% {
+        background-image: url(/assets/toupeira2.svg);
+    }
+
+    40% {
+        background-image: url(/assets/toupeira3.svg);
+    }
+
+    60% {
+        background-image: url(/assets/toupeira4.svg);
+    }
+
+    80% {
+        background-image: url(/assets/toupeira5.svg);
+    }
+
+    100% {
+        background-image: url(/assets/toupeira6.svg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  .toupeira {
+    animation: toupeira;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes toupeira {
+    0% {
+      background-image: url(assets/toupeira1.svg);
+      transform: translateY(0px);
+  }
+    20% {
+      background-image: url(assets/toupeira2.svg);
+  }
+    40% {
+    background-image: url(assets/toupeira3.svg);
+  }
+    60% {
+    background-image: url(assets/toupeira4.svg);
+  }
+    80% {
+    background-image: url(assets/toupeira5.svg);
+  }
+    100% {
+    background-image: url(assets/toupeira6.svg);
+  }
+} */
